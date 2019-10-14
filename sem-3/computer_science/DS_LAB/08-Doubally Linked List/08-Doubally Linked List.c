@@ -77,7 +77,7 @@ NODE* create(NODE *head)
         newnode=getnode();
         head=newnode;
     }
-    else if(countnodes(head)<MAX)
+    else if(countnodes(head)>=MAX)
     {
         newnode=getnode();
         while(p->right!=NULL)
