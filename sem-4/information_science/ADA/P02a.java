@@ -24,7 +24,7 @@ class staff
 	}
 	void display()
 	{
-		System.out.print(staffid+"\t\t"+name+"\t"+phn+"\t\t"+salary+"\t");
+		System.out.println(staffid+"\t\t"+name+"\t"+phn+"\t\t"+salary+"\t");
 	}
 	public static void main(String[] args) 
 	{
