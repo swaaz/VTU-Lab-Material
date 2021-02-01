@@ -25,20 +25,19 @@ class CRC{
         }
         int a=n+d-1;
         System.out.println("Transmitter side data is");
-        for(int i=0;i<a;i++){
+
+        for(int i=0;i<a;i++)
             System.out.print(data[i]);
             
-        }
+
 		System.out.println();
 		
-        for(int i=0;i<n;i++){
+        for(int i=0;i<n;i++)
 			if (data[i]==1)
-			for(int j=i;j<d+i;j++){
-				data[j]=data[j]^div[j-i];
-            
-            
-            }
-        }
+                for(int j=0;j<d+i;j++)
+                    data[i+j] ^= div[j];
+
+        
         System.out.println("CRC is");
         for(int i=n;i<a;i++){
             System.out.print(data[i]);
@@ -48,7 +47,7 @@ class CRC{
         System.out.println("Enter the number of data bits received");
         int n1=sc.nextInt();
         if(n1!=n){
-            System.out.print("Data is rejected");	
+            System.out.print("Data is rejected");
             sc.close();
             return;
         }
@@ -60,17 +59,11 @@ class CRC{
         for(int i=0;i<a;i++){
             System.out.println(data[i]);
         }
-        for(int i=0;i<n;i++){
-            if (data[i]==0)
-            {
-                continue;
-            }
-            else{
-                for(int j=i;j<d+i;j++){
-                    data[j]=data[j]^div[j-i];
-                }
-            }
-        }
+        for(int i=0;i<n;i++)
+			if (data[i]==1)
+                for(int j=0;j<d+i;j++)
+                    data[i+j] ^= div[j];
+
         System.out.println("The CRC is");
         for(int i=n;i<a;i++){
             System.out.print(data[i]);
