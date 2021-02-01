@@ -12,7 +12,7 @@ class rsa{
         int ct[]=new int[30];
         int d=0;
         System.out.println("Enter P and Q values");  //p*q>127
-        var sc=new Scanner(System.in);
+        Scanner sc=new Scanner(System.in);
         int p=sc.nextInt();
         int q=sc.nextInt();
         int n=p*q;
