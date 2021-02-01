@@ -8,6 +8,7 @@ public class try_client {
         Socket s = new Socket("127.0.0.1", 6300);
         Scanner sc = new Scanner(System.in);
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Enter file name");
         String fname = br.readLine();
         PrintWriter pw = new PrintWriter(s.getOutputStream(), true);
         pw.println(fname);
