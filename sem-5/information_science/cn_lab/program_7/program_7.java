@@ -1,6 +1,7 @@
-    import java.util.Scanner;
-    class CRC{
-        public static void main(String args[]){
+import java.util.Scanner;
+
+class CRC {
+    public static void main(String args[]){
             int data[]=new int[100];
             int flag=0;
             int div[]=new int[100];
@@ -34,7 +35,7 @@
             
             for(int i=0;i<n;i++)
                 if (data[i]==1)
-                    for(int j=0;j<d+i;j++)
+                    for(int j=0;j<d;j++)
                         data[i+j] ^= div[j];
 
             
@@ -62,7 +63,7 @@
             System.out.println()
             for(int i=0;i<n;i++)
                 if (data[i]==1)
-                    for(int j=0;j<d+i;j++)
+                    for(int j=0;j<d;j++)
                         data[i+j] ^= div[j];
 
             System.out.println("The CRC is");
@@ -84,4 +85,4 @@
             }
             sc.close();
         }
-    }
+}
