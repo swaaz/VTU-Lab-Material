@@ -31,6 +31,7 @@ public class leaky {
                 count=0;
             }
             System.out.println(i+1+"\t"+inp[i]+"\t\t"+mini+"\t\t"+count+"\t\t"+drop);
+            drop =0;
         }
         for(;count!=0;i++){                    //if data is remaining in bucket after input becomes null
             if(count>cap){
@@ -46,6 +47,7 @@ public class leaky {
                 count=0;
             }
             System.out.println(i+1+"\t"+inp[i]+"\t\t"+mini+"\t\t"+count+"\t\t"+drop);
+            drop = 0;
         }
         sc.close();
     }
