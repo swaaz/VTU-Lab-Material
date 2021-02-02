@@ -1,7 +1,7 @@
 import java.io.*;
 import java.net.*;
 class Dataudp{    
-    public static int serverport=1632;    
+    public static int serverport=1632;
     public static int clientport=1633;    
     public static byte[] buffer=new byte[100];    
     public static DatagramSocket ds;    
